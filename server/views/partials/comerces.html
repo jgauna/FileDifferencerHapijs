@@ -1,0 +1,56 @@
+{% for com in comerces %}
+<div class="pub-quin">
+  <img data-echo="{{com['image']}}" class="pub-img lazy" />
+  <h1 class="text-large">{{com['name']|title}}</h1>
+  <div class="data-container">
+    <div class="pub-text">
+      <span class="bold">Dirección:</span>
+      {% if com['address'] == 'No Disponible' %}
+        <span class="displayed_info">No Disponible</span>
+      {% else %}
+        <span class="displayed_info">{{com['address']}}</span>
+      {% endif %}
+    </div>
+    <div class="pub-text">
+      <span class="bold">Celular:</span>
+      {% if com['cellphone'] == 'No Disponible' %}
+        <span class="displayed_info">No Disponible</span>
+      {% else %}
+        <span class="displayed_info">{{com['cellphone']}}</span>
+      {% endif %}
+    </div>
+    <div class="pub-text">
+      <span class="bold">Teléfono: </span>
+      {% if com['telephone'] == 'No Disponible' %}
+        <span class="displayed_info">No Disponible</span>
+      {% else %}
+        <span class="displayed_info">{{com['telephone']}}</span>
+      {% endif %}
+    </div>
+    <div class="pub-text">
+      <span class="bold">Email:</span>
+      {% if com['email'] == 'No Disponible' %}
+        <span class="displayed_info">No Disponible</span>
+      {% else %}
+        <span class="displayed_info">{{com['email']}}</span>
+      {% endif %}
+    </div>
+    <div class="pub-text">
+      <span class="bold">Página Web:</span>
+      {% if com['website'] == 'No Disponible' %}
+        <span class="displayed_info">No Disponible</span>
+      {% else %}
+        <span class="displayed_info"><a href="{{com['website']}}" target="_blank">{{com['website']|replace('http://', '', 'gi')}}</a></span>
+      {% endif %}
+    </div>
+    <div class="pub-text">
+      <span class="bold">Rubro:</span>
+     <span class="displayed_info">{{com['category']}}</span>
+    </div>
+    <div class="pub-text">
+      <span class="bold">Horario:</span>
+      <span class="displayed_info">{{com['time']}}</span>
+    </div>
+  </div>
+</div>
+{% endfor %}

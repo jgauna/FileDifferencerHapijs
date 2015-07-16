@@ -1,0 +1,51 @@
+Android Studio
+
+INSTALLATION INSTRUCTIONS
+===============================================================================
+
+  Linux Installation Instructions
+  ------------------------------------------------------------------------------
+  1. Unpack the Android Studio distribution archive that you downloaded to
+     where you wish to install the program. We will refer to this destination
+     location as your {installation home} below.
+
+  2. Open a console and cd into "{installation home}/bin" and type:
+
+       ./@@script_name@@
+
+     to start the application.
+
+  3. [OPTIONAL] Add the "{installation home}/bin" to your PATH environmental
+     variable so that you may start Android Studio from any directory.
+
+  4. [OPTIONAL] To adjust the value of JVM heap size open studio.vmoptions
+     (studio64.vmoptions for 64-bit JDK), and modify the -Xms and -Xmx parameters.
+
+
+  [OPTIONAL] Changing location of "config" and "system" directory
+  ------------------------------------------------------------------------------
+  By default Android Studio stores all your settings under ~/.AndroidStudio1.2/config directory
+  and stores data cache under ~/.AndroidStudio1.2/system directory.
+  If you want to change these settings,
+
+  1. Open a console and cd into "{installation home}/bin"
+
+  2. Open file "idea.properties" in an editor. You should find strings like
+
+     idea.system.path=~/.AndroidStudio.2/system
+
+     and
+
+     idea.config.path=~/.AndroidStudio.2/config
+
+     and change them.
+
+  3. Note that we recommend to store data cache ("system" directory) at a disk 
+     with at least 1G bytes free space
+
+
+
+
+Enjoy!
+
+-Android Studio Development Team
